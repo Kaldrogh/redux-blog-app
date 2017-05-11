@@ -3,25 +3,9 @@ import { Link } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
 import { createPost } from "../actions";
+import { FIELDS } from "../utilities/fields_factory";
 import _ from "lodash";
 
-const FIELDS = {
-  title: {
-    type: "input",
-    minLength: 3,
-    label: "Title"
-  },
-  categories: {
-    type: "input",
-    minLength: 3,
-    label: "Categories"
-  },
-  content: {
-    type: "textarea",
-    minLength: 20,
-    label: "Article Content"
-  }
-};
 
 class PostsNew extends Component {
   renderFields() {
